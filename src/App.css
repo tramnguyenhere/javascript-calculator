@@ -31,15 +31,14 @@ body {
   background-color: rgba(249, 222, 201, 0.75);
 }
 
-#clear,
-#equals,
-#zero {
+#allClear,
+#equals {
   grid-column: span 2;
 }
 
 #display {
   grid-column: 1/-1;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: grey;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -49,12 +48,28 @@ body {
   word-break: break-all;
 }
 
-#display .previous-operand {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1.5rem;
-}
-
-#display .current-operand {
+#display .previous-operand input {
+  outline: none;
+  border: none;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-align: right;
+  font-family: 'DotGothic16', sans-serif;
+  background-color: grey;
+}
+#display .current-operand .total {
+  outline: none;
+  border: none;
+  color: black;
+  font-size: 2rem;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-align: right;
+  font-family: 'DotGothic16', sans-serif;
 }
